@@ -33,6 +33,12 @@ javascript:(function(d){'use strict';var yourURL='https://webapps.ncsu.edu/acces
 javascript:(function(d){'use strict';var revenge=d.createElement('link');revenge.href='https://rawgit.com/Heydon/REVENGE.CSS/master/revenge.css';revenge.rel='stylesheet';revenge.media='all';(d.body||d.getElementsByTagName('body')[0]).appendChild(revenge);})(document);
 ```
 
+**[Trashy.css](https://t7.github.io/trashy.css/):** "The throwaway CSS library with no `class`" outlines the semantic elements of a document and points out accessibility errors similarly to a11y.css.
+
+```javascript
+javascript:(function(d){'use strict';var l=d.querySelectorAll('[rel=\'stylesheet\']'),s=d.querySelectorAll('style'),t=d.createElement('link'),n=l.length;while(n--)l[n].setAttribute('rel','');for(n=s.length;s--;)s[n].innerHTML='';t.setAttribute('rel','stylesheet');t.setAttribute('href','https://t7.github.io/trashy.css/css/bookmarklet.css');(d.head||d.getElementsByTagName('head')[0]).appendChild(t);})(document);
+```
+
 **[Web Evaluation Tools Bookmarklet](http://accessibility.oit.ncsu.edu/tools/web-evaluation-tools):** This set of tools allows you to check for several aspects of Web accessibility that other tools do not. It is not designed to replace any other tools, but rather to supplement them.
 
 ```javascript
@@ -40,7 +46,6 @@ javascript:(function(d){'use strict';var yourURL='https://webapps.ncsu.edu/web-e
 ```
 
 ## Debug
-
 **[45-75](https://css-tricks.com/bookmarklet-colorize-text-45-75-characters-line-length-testing/):** Check whether lines are between 45 and 75 characers, for optimal readability; this especially helps with font sizing for responsive web design.
 
 ```javascript
@@ -99,6 +104,12 @@ javascript:(function(d){'use strict';if(!d.getElementById('flippantscript')){var
 
 ```javascript
 javascript:(function(d){'use strict';if(!d.getElementById('minscript')){var minscript=d.createElement('script');minscript.src='http://min.artequalswork.com/min.js';minscript.id='minscript';(d.body||d.getElementsByTagName('body')[0]).appendChild(minscript);}else m();})(document);
+```
+
+**[WebFontPicker](https://github.com/danielgavrilov/WebFontPicker):** A bookmarklet that helps preview Google Web Fonts live on any website.
+
+```javascript
+javascript:(function(w,d){'use strict';var t=w.WFP=w.WFP||{},e='https:'===w.location.protocol?'https:':'http:';t.bookmarklet=3,t.Picker&&t.Picker.show(),t.attached||t.Picker||((function(t){var e=d.createElement('link');e.rel='stylesheet',e.type='text/css',e.href=t,(d.head||d.getElementsByTagName('head')[0]).appendChild(e)})(e+'//gavrilov.co.uk/wfp/WFP.css'),(function(t){var e=d.createElement('script');e.type='text/javascript',e.src=t,(d.head||d.getElementsByTagName('head')[0]).appendChild(e)})(e+'//gavrilov.co.uk/wfp/WFP.full.min.js'),t.attached=!0)})(window,document);
 ```
 
 **[WhatFont](https://github.com/chengyin/WhatFont-Bookmarklet):** WhatFont is a JavaScript script to detect what font in the stack is being used on any elements of a web page.
