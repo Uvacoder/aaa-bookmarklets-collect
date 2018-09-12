@@ -69,6 +69,24 @@ javascript:(function(d){'use strict';var elts=(d.body||d.getElementsByTagName('b
 javascript:(function(d){'use strict';var s=d.createElement('style'),e=d.getElementById('debugCss');;s.id='debugCss';s.innerHTML='*{background-color: rgba(0, 0, 0, .05) !important;outline: 1px solid #fff !important;}';if(null==e)(d.head||d.getElementsByTagName('head')[0]).appendChild(s);else e.parentNode.removeChild(e);})(document);
 ```
 
+**[Firebug Lite](https://getfirebug.com/):** The project itself is dead, but just in case you want to use it on very old browsers without their own DevTools, the scripts and assets have been saved on the Internet Archive.
+
+```javascript
+javascript:(function(F,i,r,e,b,u,g,L,I,T,E){'use strict';if(F.getElementById(b))return;E=F[i+'NS']&&F.documentElement.namespaceURI;E=E?F[i+'NS'](E,'script'):F[i]('script');E[r]('id',b);E[r](b,u);(F.head||F.body||F[e]('head')[0]||F[e]('body')[0]||F[e]('frameset')[0]).appendChild(E).src=I+g+T;E=new Image;E[r]('src',I+L);})(document,'createElement','setAttribute','getElementsByTagName','FirebugLite','4','firebug-lite.js','releases/lite/latest/skin/xp/sprite.png','https://web.archive.org/web/20171119035137id_/https://getfirebug.com/','#startOpened');
+```
+
+Beta
+
+```javascript
+javascript:(function(F,i,r,e,b,u,g,L,I,T,E){'use strict';if(F.getElementById(b))return;E=F[i+'NS']&&F.documentElement.namespaceURI;E=E?F[i+'NS'](E,'script'):F[i]('script');E[r]('id',b);E[r](b,u);(F.head||F.body||F[e]('head')[0]||F[e]('body')[0]||F[e]('frameset')[0]).appendChild(E).src=I+g+T;E=new Image;E[r]('src',I+L);})(document,'createElement','setAttribute','getElementsByTagName','FirebugLite','4','firebug-lite-beta.js','releases/lite/latest/skin/xp/sprite.png','https://web.archive.org/web/20171119035137id_/https://getfirebug.com/','#startOpened');
+```
+
+Debug
+
+```javascript
+javascript:(function(F,i,r,e,b,u,g,L,I,T,E){'use strict';if(F.getElementById(b))return;E=F[i+'NS']&&F.documentElement.namespaceURI;E=E?F[i+'NS'](E,'script'):F[i]('script');E[r]('id',b);E[r](b,u);(F.head||F.body||F[e]('head')[0]||F[e]('body')[0]||F[e]('frameset')[0]).appendChild(E).src=I+g+T;E=new Image;E[r]('src',I+L);})(document,'createElement','setAttribute','getElementsByTagName','FirebugLite','4','firebug-lite-debug.js','releases/lite/latest/skin/xp/sprite.png','https://web.archive.org/web/20171119035137id_/https://getfirebug.com/','#startOpened');
+```
+
 **[Yahoo! debugCSS](https://github.com/yahoo/debugCSS):** debugCSS is meant to be loaded on an existing page to highlight potentially broken, malformed or legacy (X)HTML.
 
 ```javascript
