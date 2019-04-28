@@ -2,6 +2,7 @@
 
 ## Table of contents
 * [Accessibility](#accessibility--validation)
+* [Archival](#archival)
 * [Debug](#debug)
 * [Fonts](#fonts)
 * [Performance](#performance)
@@ -43,6 +44,28 @@ javascript:(function(d){'use strict';var l=d.querySelectorAll('[rel=\'stylesheet
 
 ```javascript
 javascript:(function(d){'use strict';var yourURL='https://webapps.ncsu.edu/web-evaluation-tools/web-evaluation-tools.php';function getScript(url,success){var script=d.createElement('script'),head=d.head||d.getElementsByTagName('head')[0],done=false;script.src=url;script.onload=script.onreadystatechange=function(){if(!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')){done=true;success();script.onload=script.onreadystatechange=null;head.removeChild(script);}};head.appendChild(script);}getScript(yourURL,function(){});})(document);
+```
+
+## Archival
+**[Archive.is](http://archive.is/) (also .li and .today):** Send the current page to a Web-archiving service, through one of its domain names.
+```javascript
+javascript:void(window.open('https://archive.is/?run=1&url='+encodeURIComponent(location.href)).opener=null);
+```
+```javascript
+javascript:void(window.open('https://archive.li/?run=1&url='+encodeURIComponent(location.href)).opener=null);
+```
+```javascript
+javascript:void(window.open('https://archive.today/?run=1&url='+encodeURIComponent(location.href)).opener=null);
+```
+
+**[FreezePage](http://www.freezepage.com/button):** This archiver works well in conjunction with Archive.is, to get the text-content of rich pages and then archive that more permanently; free registration is required.
+```javascript
+javascript:void(window.open('http://www.freezepage.com/?button=1&url='+encodeURIComponent(location.href)+'&name='+encodeURIComponent(document.title)).opener=null);
+```
+
+**[WebCite](http://webcitation.org/):** Yet Another Website Archiver
+```javascript
+javascript:void(window.open('http://www.webcitation.org/query.php?url='+encodeURIComponent(location.href)).opener=null);
 ```
 
 ## Debug
