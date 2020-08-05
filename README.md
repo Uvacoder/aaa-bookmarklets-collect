@@ -16,6 +16,12 @@
 javascript:(function(d){'use strict';var a11ycss=d.createElement('link');a11ycss.href='https://rawgit.com/ffoodd/a11y.css/master/css/a11y-en.css';a11ycss.rel='stylesheet';a11ycss.media='all';(d.body||d.getElementsByTagName('body')[0]).appendChild(a11ycss);})(document);
 ```
 
+**[Construct.css](https://t7.github.io/construct.css/):** Formerly known as Trashy.css, "the throwaway CSS library with no `class`," this outlines the semantic elements of a document and points out accessibility errors similarly to a11y.css.
+
+```javascript
+javascript:(function(d){'use strict';var l=d.querySelectorAll('[rel=\'stylesheet\']'),s=d.querySelectorAll('style'),t=d.createElement('link'),n=l.length;while(n--)l[n].setAttribute('rel','');for(n=s.length;s--;)s[n].innerHTML='';t.setAttribute('rel','stylesheet');t.setAttribute('href','https://t7.github.io/construct.css/css/bookmarklet.css');(d.head||d.getElementsByTagName('head')[0]).appendChild(t);})(document);
+```
+
 **[HTML_CodeSniffer](https://github.com/squizlabs/HTML_CodeSniffer):** HTML_CodeSniffer is a client-side JavaScript that checks a HTML document or source code, and detects violations of a defined coding standard.
 
 ```javascript
@@ -32,12 +38,6 @@ javascript:(function(d){'use strict';var yourURL='https://webapps.ncsu.edu/acces
 
 ```javascript
 javascript:(function(d){'use strict';var revenge=d.createElement('link');revenge.href='https://rawgit.com/Heydon/REVENGE.CSS/master/revenge.css';revenge.rel='stylesheet';revenge.media='all';(d.body||d.getElementsByTagName('body')[0]).appendChild(revenge);})(document);
-```
-
-**[Trashy.css](https://t7.github.io/trashy.css/):** "The throwaway CSS library with no `class`" outlines the semantic elements of a document and points out accessibility errors similarly to a11y.css.
-
-```javascript
-javascript:(function(d){'use strict';var l=d.querySelectorAll('[rel=\'stylesheet\']'),s=d.querySelectorAll('style'),t=d.createElement('link'),n=l.length;while(n--)l[n].setAttribute('rel','');for(n=s.length;s--;)s[n].innerHTML='';t.setAttribute('rel','stylesheet');t.setAttribute('href','https://t7.github.io/trashy.css/css/bookmarklet.css');(d.head||d.getElementsByTagName('head')[0]).appendChild(t);})(document);
 ```
 
 **[Web Evaluation Tools Bookmarklet](http://accessibility.oit.ncsu.edu/tools/web-evaluation-tools):** This set of tools allows you to check for several aspects of Web accessibility that other tools do not. It is not designed to replace any other tools, but rather to supplement them.
@@ -69,7 +69,7 @@ javascript:void(window.open('http://www.webcitation.org/query.php?url='+encodeUR
 ```
 
 ## Debug
-**[45-75](https://css-tricks.com/bookmarklet-colorize-text-45-75-characters-line-length-testing/):** Check whether lines are between 45 and 75 characers, for optimal readability; this especially helps with font sizing for responsive web design.
+**[45–75](https://css-tricks.com/bookmarklet-colorize-text-45-75-characters-line-length-testing/):** Check whether lines are between 45 and 75 characers, for optimal readability; this especially helps with font sizing for responsive web design.
 
 ```javascript
 javascript:(function(d){'use strict';var loadScript;function init(){var $=jQuery.noConflict(true),redOutline={outline:'2px solid red'},text,textyElements='p,li,dt,dd,h1,h2,h3,h4,h5,h6';$(textyElements).on('mouseover.red',function(){$(this).css(redOutline);}).on('mouseleave.red',function(){$(this).removeAttr('style');}).on('click.red',function(){text=$(this).text();var e=text.substring(0,45),t=text.substring(45,75),n=text.substring(75,text.length),r=e+'<span style="color:red;">'+t+'</span>'+n;$(this).html(r);$(textyElements).off('mouseover.red mouseleave.red click.red');$(this).removeAttr('style');});}if(typeof jQuery==='undefined'||typeof $==='undefined'||$!==jQuery){loadScript=function loadScript(a,b){var c=d.createElement('script'),head=d.head||d.getElementsByTagName('head')[0],done=false;c.type='text/javascript';c.onload=c.onreadystatechange=function(){if(!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')){done=true;b();}};head.appendChild(c).src=a;};loadScript('https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js',init);}else init();})(document);
