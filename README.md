@@ -343,7 +343,7 @@ javascript:(function(y,h,v,o,i,s,_,d,u,l,g){"use strict";!function(a){var n={};f
 via SMMRY
 
 ```javascript
-javascript:void(window.open(https://smmry.com/'+location.href).opener=null);
+javascript:void(window.open('https://smmry.com/'+location.href).opener=null);
 ```
 
 Alternatively, to summarize in the same tab:
