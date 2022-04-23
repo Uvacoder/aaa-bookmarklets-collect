@@ -318,6 +318,12 @@ javascript:(function(d){'use strict';var s=d.createElement('script');s.type='tex
 ```
 
 ## Miscellaneous
+### [AMP to Canonical](https://alanstorm.com/bookmarklet-to-redirect-from-amp-urls-to-real-urls/) exploits the fact that every Accelerated Mobile Page must include a `link` element with a `rel="canonical"` attribute.
+
+```javascript
+javascript:(function(d,l){'use strict';var u=false,k=d.getElementsByTagName('link'),n=k.length,j;for(j=0;j<n;j++)if(k[j].rel==='canonical'){u=k[j].href;break;}if(!u||u===l.href)alert('Canonical URL does not exist or is current URL');else l.href=u;})(document,location);
+```
+
 ### [Color-Picker](https://css-tricks.com/web-development-bookmarklets/)
 
 Based on [a Tweet by Scott Jehl](https://twitter.com/scottjehl/status/1428465011475746820), but set to open in a new tab or window.
